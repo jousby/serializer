@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'scala'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile ('org.scala-lang:scala-library:2.10.3') { force=true }
+    compile ('org.scala-lang:scala-reflect:2.10.3') { force=true }
+    
+    compile 'com.fasterxml.jackson.core:jackson-core:2.3.0'
+    compile 'org.msgpack:msgpack:0.6.9'
+                
+    testCompile 'org.scalatest:scalatest_2.10:2.0'
+}
+
